@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.post("http://192.168.0.102:7777/test", function (data) {
+                    $('#response').html(data);
+                })
+                .fail(function () {
+                    $('#response').html('Error requesting data!');
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <span id="response"></span>
+</body>
+
+</html>
